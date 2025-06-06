@@ -1,21 +1,19 @@
 variable "user_pool_name" {
-  type = string
-}
-
-variable "app_client_name" {
-  type = string
+  type        = string
+  description = "Name for the Cognito User Pool"
 }
 
 variable "identity_pool_name" {
-  type = string
+  type        = string
+  description = "Name for the Cognito Identity Pool"
 }
 
 variable "authenticated_role_name" {
-  type = string
+  type        = string
+  description = "IAM role name for authenticated users"
 }
 
-variable "auto_verified_attributes" {
-  type = list(string)
-  default = []
+variable "upload_bucket_name" {
+  type        = string
+  description = "S3 bucket name for file uploads"
 }
-

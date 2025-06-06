@@ -1,17 +1,10 @@
-variable "auth" {
-  type = object({
-    user_pool_name     = string
-    app_client_name    = string
-    identity_pool_name = string
-  })
-  description = "Authentication-related configuration including user pool, app client, and identity pool names"
+variable "ses_from_email" {
+  description = "The verified email address used as the sender for SES notifications"
+  type        = string
 }
 
-variable "storage" {
-  type = object({
-    s3 = object({
-      bucket_name = string
-      env         = string
-    })
-  })
+variable "ses_to_email" {
+  description = "The recipient email address to receive upload notifications"
+  type        = string
 }
+

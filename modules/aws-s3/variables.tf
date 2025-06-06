@@ -1,12 +1,10 @@
 variable "bucket_name" {
-  type = string
+  description = "Name of the S3 bucket to create"
+  type        = string
 }
 
-variable "env" {
-  type    = string
-  default = "dev"
-}
-
-variable "authenticated_role_name" { 
-  type = string
+variable "enable_versioning" {
+  description = "Enable versioning for the bucket"
+  type        = bool
+  default     = false
 }
