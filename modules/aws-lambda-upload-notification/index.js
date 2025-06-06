@@ -5,6 +5,7 @@ const FROM_EMAIL = process.env.FROM_EMAIL;
 const TO_EMAIL = process.env.TO_EMAIL;
 
 exports.handler = async (event) => {
+  console.log("Lambda triggered. Event:", JSON.stringify(event, null, 2));
   try {
     for (const record of event.Records) {
       const body = JSON.parse(record.body);

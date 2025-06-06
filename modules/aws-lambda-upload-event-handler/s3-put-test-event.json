@@ -1,0 +1,20 @@
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "us-east-1",
+      "eventTime": "2025-06-02T12:34:56.000Z",
+      "eventName": "ObjectCreated:Put",
+      "s3": {
+        "bucket": {
+          "name": "xyz-logistics-uploads-bucket-dev"
+        },
+        "object": {
+          "key": "uploads/us-east-1:5fdf0b7c-3c5f-cfb2-f1b7-25dd9cf31ed8/transporter_upload_2025-06-02.csv",
+          "size": 12345
+        }
+      }
+    }
+  ]
+}

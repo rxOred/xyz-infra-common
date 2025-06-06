@@ -7,6 +7,7 @@ const TABLE_NAME = process.env.TABLE_NAME;
 const QUEUE_URL = process.env.QUEUE_URL;
 
 exports.handler = async (event) => {
+  console.log("Lambda triggered. Event:", JSON.stringify(event, null, 2));
   try {
     for (const record of event.Records) {
       const bucket = record.s3.bucket.name;
